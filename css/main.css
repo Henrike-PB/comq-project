@@ -1,3 +1,231 @@
+:root{
+    --bg-color:  #F4F6F5;
+    --verde-comq: #255157;
+    --hoverVerde-comq: #12292c;
+    --amarelo-comq: #FFC55C;
+    --hoverAmarelo-comq: #be9240;
+    --laranja-comq: #FF7D43;
+    --rosa-comq: #C50A78;
+}
+
+
 body, html {
-    background-color: #245359;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CONFIG. DO CABEÇALHO */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-color);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+nav ul li a.btn {
+    background-color: var(--verde-comq);
+    color: white;
+    border-radius: 5px;
+}
+
+nav ul li a.btn:hover {
+    background-color: var(--hoverVerde-comq);
+}
+/* FIM DA CONFIG. CABEÇALHO */
+
+
+/* CONFIG. INTRODUÇÃO DO SITE */
+.container-intro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 55px;
+    background-color: var(--bg-color);
+    text-align: center;
+    /* border: 1px solid red; */
+    border-radius: 59px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.text-content {
+    max-width: 600px;
+    margin: 20px;
+}
+
+.text-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: var(--verde-comq);
+}
+
+.text-content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.text-content button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--verde-comq);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.text-content button a {
+    color: white;
+    text-decoration: none;
+}
+
+.text-content button:hover {
+    background-color: var(--hoverVerde-comq);
+}
+
+.image-container {
+    max-width: 600px;
+    margin: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 768px) {
+    .container-intro {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .text-content, .image-container {
+        max-width: 50%;
+    }
+}
+/*FIM CONFIG. INTRODUÇÃO DO SITE */
+
+
+
+/* CONFIG. SOBRE NÓS (QUEM SOMOS) */
+.sobre {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.sobre h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.sobre p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sobre button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: var(--amarelo-comq);
+    color: white;
+    border: none;
+    border-radius: 43px;
+    transition: background-color 0.3s;
+}
+
+.sobre button a {
+    color: white;
+    text-decoration: none;
+}
+
+.sobre button:hover {
+    background-color: var(--hoverAmarelo-comq);
+}
+
+.container-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--laranja-comq);
+    border: 1px solid #ddd;
+    border-radius: 59px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.meio {
+    border: 1px solid var(--laranja-comq);
+    background-color: var(--bg-color);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-stroke: 1px #255157; /* Contorno verde */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    
+}
+
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
 }
