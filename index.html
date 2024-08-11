@@ -5,96 +5,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMQ - Centro de Oportunidades do Mário Quintana</title>
+    <link rel="shortcut icon" href="assets/shortcut/comq-icon2.png" type="image/x-icon">
+    <!-- arquivos css -->
+    <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <!-- Fonte Poppins do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- ÁREA DO CABEÇALHO -->
+    <!-- CABEÇALHO DO SITE -->
     <header>
-        
         <div class="logo">
-            <img src="#" alt="Logo COMQ">
+            <img src="./assets/header/lampada.png" class="lampada" alt="">
+            <img src="./assets/header/comq.png" class="comq-logo" alt="">
         </div>
 
-        <nav>
-            <ul>
-                <li><a href="#">QUEM SOMOS</a></li>
-                <li><a href="#">MISSÃO</a></li>
-                <li><a href="#">PARCEIROS</a></li>
-                <li ><a href="#" class="btn">ENTRE EM CONTATO</a></lli>
-            </ul>
+        <nav class="nav-links">
+            <a href="#">QUEM SOMOS</a>
+            <a href="#">MISSÃO</a>
+            <a href="#">PARCEIROS</a>
+            <button>ENTRE EM CONTATO</button>
         </nav>
+
+        <div class="menu-hamburguer">
+            <img src="./assets/header/menu-hamburguer-Icon.png" onclick="openMenu()" alt="Menu hamburguer">
+            <nav id="menuNavLinks">
+                <a href="#">QUEM SOMOS</a>
+                <a href="#">MISSÃO</a>
+                <a href="#">PARCEIROS</a>
+                <button class="entre-em-contato-btn">ENTRE EM CONTATO</button>
+                <button class="close-menu" onclick="closeMenu()">close</button>
+            </nav>
+        </div>
     </header>
-    <!-- FIM DA ÁREA DO CABEÇALHO -->
 
     <!-- CONTEÚDO PRINCIPAL DO SITE -->
     <main>
-        <button onclick="notification()">
-            Test notification
-        </button>
-
 
         <!-- CONTAINER ONDE INTRODUZ AO SITE, COM CHAMADA DE AÇÃO -->
-
-
-
-        <!-- <section class="container-intro">
-
-            <h1>OPORTUNIDADES <br>
-                para tod@s
-            </h1>
-
-            <p>Impulsionando empreendedores, jovens talentos e empreendimentos locais do bairro Mário Quintana</p>
-
-            <div>
-                <img src="#" alt="Ilustração pessoas pulando">
+        <section class="container-intro">
+            <div class="text-content">
+                <h1 style="font-weight: 900;">OPORTUNIDADES <br> para tod@s</h1>
+                <p>Impulsionando empreendedores, jovens talentos e empreendimentos locais do bairro Mário Quintana</p>
+                <button><a href="#">PARTICIPE</a></button>
             </div>
 
-            <button><a href="#">PARTICIPE</a></button>
+            <div class="image-container">
+                <img scr="./assets/main/oportunidadesParaTodos/lampada.png" alt="Lâmpada brilhando na diagonal">
+                <img src="assets/main/oportunidadesParaTodos/pessoas alegres.png" alt="Ilustração pessoas pulando">
+            </div>
 
+        </section>
 
-        </section> -->
+        <!-- SECTION DE SOBRE O COMQ -->
+        <section class="sobre">
+            <h2 style="font-weight: 900; text-align: center;">QUEM SOMOS?</h2>
+            <p>Somos um projeto que combina vontade, inovação e criatividade para ajudar as pessoas</p>
+            <div class="sobre-btn">
+            <button><a href="#">SAIBA MAIS</a></button>
+            </div>
 
-        <section class="container-intro">
-           
-
-                <div class="text-content">
-                    <h1>OPORTUNIDADES <br> para tod@s</h1>
-                    <p>Impulsionando empreendedores, jovens talentos e empreendimentos locais do bairro Mário Quintana</p>
-                    <button><a href="#">PARTICIPE</a></button>
+            <div class="container-cards">
+                <div class="card">
+                    <h3 >Pensamos globalmente e agimos localmente</h3>
+                    <img src="assets/main/quemSomos/globo.png" alt="Globo escolar">
                 </div>
-            
-                <div class="image-container">
-                    <img src="#" alt="Ilustração pessoas pulando">
+                <div class="card meio">
+                    <h3 >Dedicada a impulsionar empreended@res e jovens talentos</h3>
+                    <img src="assets/main/quemSomos/ideias em conjunto.png" alt="Pessoas idealizando">
                 </div>
+                <div class="card">
+                    <h3 >Trazemos acesso à informação e compartilhamento de oportunidades</h3>
+                    <img src="assets/main/quemSomos/livro.png"
+                        alt="Livro aberto com um sinal de informação dentro dele">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION DE "FAÇA PARTE DA COMUNIDADE"  -->
+
+        <section class="container">
+            <div class="content">
+                <h2 class="titulo-container">Faça parte dessa <br> <span>comunidade!</span></h1>
+                <div class="buttons">
+                    <div class="jovens">
+                        <button class="cta-btn" onclick="zoomOne()">Jovens</button>
+                        <div class="qrjovens qr">
+
+                            <h2>Jovens</h2>
+
+                            <img src="" alt="qrcode" width="200px" height="200px">
+
+                            <button> Entre na comunidade </button>
+                        </div>
+                    </div>
+                    <div class="empreendimentos">
+                        <button class="cta-btn pink" onclick="zoomTwo()">Empreendimentos</button>
+                        <div class="qrempreendimentos qr">
+
+                            <h2>Empreendimentos</h2>
+
+                            <img src="" alt="qrcode" width="200px" height="200px">
+
+                            <button> Entre na comunidade </button>
+                        </div>
+                    </div>
+                    <div class="empreendedoras">
+                        <button class="cta-btn" onclick="zoomThree()">Empreendedoras</button>
+                        <div class="qrempreendedoras qr">
+
+                            <h2>Empreendedoras</h2>
+
+                            <img src="" alt="qrcode" width="200px" height="200px">
+
+                            <button> Entre na comunidade </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logotipo-comq">
+                <img src="assets/main/facaParteDaComunidade/comq-logo.png" alt="COMQ Logo">
                 
-            </section>
+            </div>
+        </section>
 
-            <section class="sobre">
-                <h2>QUEM SOMOS?</h2>
-                <p>Somos um projeto que combina vontade, inovação e criatividade para ajudar as pessoas</p>
-                <button><a href="#">SAIBA MAIS</a></button>
-        
-                <div class="container-cards">
-                    <div class="card">
-                        <h3>Pensamos globalmente e agimos localmente</h3>
-                        <img src="globo.png" alt="Globo escolar">
-                    </div>
-                    <div class="card meio">
-                        <h3>Dedicada a impulsionar empreended@res e jovens talentos</h3>
-                        <img src="imagem2.png" alt="Pessoas idealizando">
-                    </div>
-                    <div class="card">
-                        <h3>Trazemos acesso à informação e compartilhamento de oportunidades</h3>
-                        <img src="imagem3.png" alt="Livro aberto com um sinal de informação dentro dele">
-                    </div>
-                </div>
-            </section>
+        <!-- SECTION DE "NOSSA MISSÃO"  -->
+        <section class="missao-container">
+            <div class="text-content2">
+                <h2 style="font-weight: 900;">NOSSA MISSÃO</h2>
+                <p>Nossa missão é aumentar os índices de renda e trabalho da comunidade do Mário Quintana, potencializando os empreendedores, jovens talentos e todo público da comunidade para o seu desenvolvimento.</p>
+                <button><a href="#">COMO APOIAR</a></button>
+            </div>
+            <div class="image-container2">
+                <img src="assets/main/nossaMissao/pessoa-escada.png" alt="Ilustração pessoa subindo uma escada.">
+            </div>
+        </section>
 
-            <!-- ADICIONAR AQUI UMA NOVA SECTION COM O CONTEUDO BASEADO NA PARTE "FAÇA PARTE DA COMUNIDADE" DO FIGMA 
-             -Henrike -->
-        
+        <!-- TERMINAR A SESSAO MISSAO E O RESTANTE -henrike -->
+
 
     </main>
     <!-- FIM DO CONTEÚDO PRINCIPAL DO SITE -->
@@ -102,6 +156,6 @@
 
 
 </body>
-<script src="./js/main.js"></script>
-
+<script src="./js/script.js"></script>
+<script src="./js/menuHamburguer.js"></script>
 </html>

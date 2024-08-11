@@ -1,0 +1,12 @@
+/* viriáveis css para compartilhar entre os arquivos css usando @import url('caminho-para-esse-arquivo'); */
+
+:root{
+    --bg-color:  #F4F6F5;
+    --hoverVerdeClaro-comq: #c4e7c4;
+    --verde-comq: #255157;
+    --hoverVerde-comq: #12292c;
+    --amarelo-comq: #FFC55C;
+    --hoverAmarelo-comq: #be9240;
+    --laranja-comq: #FF7D43;
+    --rosa-comq: #C50A78;
+}
