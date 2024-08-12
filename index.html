@@ -11,10 +11,15 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <!-- data-AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- data-AOS -->
     <!-- Fonte Poppins do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -27,18 +32,18 @@
         </div>
 
         <nav class="nav-links">
-            <a href="#">QUEM SOMOS</a>
-            <a href="#">MISSÃO</a>
-            <a href="#">PARCEIROS</a>
-            <button>ENTRE EM CONTATO</button>
+            <a href="#sobre">QUEM SOMOS</a>
+            <a href="#missao">MISSÃO</a>
+            <a href="#parceiros">PARCEIROS</a>
+            <button href="#contato">ENTRE EM CONTATO</button>
         </nav>
 
         <div class="menu-hamburguer">
             <img src="./assets/header/menu-hamburguer-Icon.png" onclick="openMenu()" alt="Menu hamburguer">
             <nav id="menuNavLinks">
-                <a href="#">QUEM SOMOS</a>
-                <a href="#">MISSÃO</a>
-                <a href="#">PARCEIROS</a>
+                <a href="#sobre">QUEM SOMOS</a>
+                <a href="#missao">MISSÃO</a>
+                <a href="#parceiros">PARCEIROS</a>
                 <button class="entre-em-contato-btn">ENTRE EM CONTATO</button>
                 <button class="close-menu" onclick="closeMenu()">close</button>
             </nav>
@@ -49,39 +54,45 @@
     <main>
 
         <!-- CONTAINER ONDE INTRODUZ AO SITE, COM CHAMADA DE AÇÃO -->
-        <section class="container-intro">
+        <section class="container-intro" data-aos="zoom-in">
             <div class="text-content">
                 <h1 style="font-weight: 900;">OPORTUNIDADES <br> para tod@s</h1>
-                <p>Impulsionando empreendedores, jovens talentos e empreendimentos locais do bairro Mário Quintana</p>
+                <p>Impulsionando empreendedores, jovens talentos e empreendimentos locais do <br> bairro Mário Quintana
+                </p>
                 <button><a href="#">PARTICIPE</a></button>
             </div>
 
             <div class="image-container">
-                <img scr="./assets/main/oportunidadesParaTodos/lampada.png" alt="Lâmpada brilhando na diagonal">
-                <img src="assets/main/oportunidadesParaTodos/pessoas alegres.png" alt="Ilustração pessoas pulando">
+                <div class="img-1">
+                    <img src="assets/main/oportunidadesParaTodos/lampada2.png" alt="Lâmpada brilhando na diagonal">
+                </div>
+                <div class="img-2">
+                    <img src="assets/main/oportunidadesParaTodos/pessoas alegres.png" alt="Ilustração pessoas pulando">
+                </div>
             </div>
-
         </section>
 
+        <hr>
+
         <!-- SECTION DE SOBRE O COMQ -->
-        <section class="sobre">
+        <section id="sobre" class="sobre" style="transform: translateY(5%);" >
             <h2 style="font-weight: 900; text-align: center;">QUEM SOMOS?</h2>
             <p>Somos um projeto que combina vontade, inovação e criatividade para ajudar as pessoas</p>
             <div class="sobre-btn">
-            <button><a href="#">SAIBA MAIS</a></button>
+                <button><a href="#">SAIBA MAIS</a></button>
             </div>
 
-            <div class="container-cards">
+            <div class="container-cards" data-aos="zoom-in">
                 <div class="card">
-                    <h3 >Pensamos globalmente e agimos localmente</h3>
+                    <h3>Pensamos globalmente e agimos localmente</h3>
                     <img src="assets/main/quemSomos/globo.png" alt="Globo escolar">
                 </div>
                 <div class="card meio">
-                    <h3 >Dedicada a impulsionar empreended@res e jovens talentos</h3>
+                    <h3>Dedicada a impulsionar empreended@res e jovens talentos</h3>
                     <img src="assets/main/quemSomos/ideias em conjunto.png" alt="Pessoas idealizando">
                 </div>
                 <div class="card">
-                    <h3 >Trazemos acesso à informação e compartilhamento de oportunidades</h3>
+                    <h3>Trazemos acesso à informação e compartilhamento de oportunidades</h3>
                     <img src="assets/main/quemSomos/livro.png"
                         alt="Livro aberto com um sinal de informação dentro dele">
                 </div>
@@ -90,72 +101,148 @@
 
         <!-- SECTION DE "FAÇA PARTE DA COMUNIDADE"  -->
 
-        <section class="container">
-            <div class="content">
+        <section class="container" >
+            <div class="content" data-aos="zoom-in">
                 <h2 class="titulo-container">Faça parte dessa <br> <span>comunidade!</span></h1>
-                <div class="buttons">
-                    <div class="jovens">
-                        <button class="cta-btn" onclick="zoomOne()">Jovens</button>
-                        <div class="qrjovens qr">
+                    <div class="buttons">
+                        <div class="jovens qrbutton">
+                            <button class="cta-btn" onclick="zoomOne()">Jovens</button>
+                            <div class="qrjovens qr" id="qrjovens">
 
-                            <h2>Jovens</h2>
+                                <h2>Jovens</h2>
 
-                            <img src="" alt="qrcode" width="200px" height="200px">
+                                <img src="assets/main/facaParteDaComunidade/qr-jovens.jpeg" alt="qrcode" width="200px"
+                                    height="200px">
+                                <a href="https://chat.whatsapp.com/IEoF66GNAYq1VtF02pPiy5">
+                                    <button> Entre na comunidade </button>
+                                </a>
+                                <button onclick="exit()"> Fechar </button>
+                            </div>
+                        </div>
+                        <div class="empreendimentos qrbutton">
+                            <button class="cta-btn pink" onclick="zoomTwo()">Empreendimentos</button>
+                            <div class="qrempreendimentos qr" id="qrempreendimentos">
 
-                            <button> Entre na comunidade </button>
+                                <h2>Empreendimentos</h2>
+
+                                <img src="assets/main/facaParteDaComunidade/qr-empreendimentos.jpeg" alt="qrcode"
+                                    width="200px" height="200px">
+
+                                <a href="https://chat.whatsapp.com/GE8BFLWP2Kk98gA3JHaEsG">
+                                    <button> Entre na comunidade </button>
+                                </a>
+                                <button onclick="exit()"> Fechar </button>
+                            </div>
+                        </div>
+                        <div class="empreendedoras qrbutton">
+                            <button class="cta-btn" onclick="zoomThree()">Empreendedoras</button>
+                            <div class="qrempreendedoras qr" id="qrempreendedoras">
+
+                                <h2>Empreendedoras</h2>
+
+                                <img src="assets/main/facaParteDaComunidade/qr-empreendedoras.jpeg" alt="qrcode"
+                                    width="200px" height="200px">
+                                <a href="https://chat.whatsapp.com/B6ZCV0jxCsY07b8X8Rkf3N">
+                                    <button> Entre na comunidade </button>
+                                </a>
+                                <button onclick="exit()"> Fechar </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="empreendimentos">
-                        <button class="cta-btn pink" onclick="zoomTwo()">Empreendimentos</button>
-                        <div class="qrempreendimentos qr">
-
-                            <h2>Empreendimentos</h2>
-
-                            <img src="" alt="qrcode" width="200px" height="200px">
-
-                            <button> Entre na comunidade </button>
-                        </div>
-                    </div>
-                    <div class="empreendedoras">
-                        <button class="cta-btn" onclick="zoomThree()">Empreendedoras</button>
-                        <div class="qrempreendedoras qr">
-
-                            <h2>Empreendedoras</h2>
-
-                            <img src="" alt="qrcode" width="200px" height="200px">
-
-                            <button> Entre na comunidade </button>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="logotipo-comq">
+            <div class="logotipo-comq" data-aos="zoom-in">
                 <img src="assets/main/facaParteDaComunidade/comq-logo.png" alt="COMQ Logo">
-                
+
             </div>
         </section>
 
         <!-- SECTION DE "NOSSA MISSÃO"  -->
-        <section class="missao-container">
+        <section id="missao" class="missao-container" data-aos="zoom-in">
             <div class="text-content2">
                 <h2 style="font-weight: 900;">NOSSA MISSÃO</h2>
-                <p>Nossa missão é aumentar os índices de renda e trabalho da comunidade do Mário Quintana, potencializando os empreendedores, jovens talentos e todo público da comunidade para o seu desenvolvimento.</p>
+                <p>Nossa missão é aumentar os índices de renda e trabalho da comunidade do Mário Quintana,
+                    potencializando os empreendedores, jovens talentos e todo público da comunidade para o seu
+                    desenvolvimento.</p>
                 <button><a href="#">COMO APOIAR</a></button>
             </div>
-            <div class="image-container2">
+            <div class="image-container2" data-aos="zoom-in">
                 <img src="assets/main/nossaMissao/pessoa-escada.png" alt="Ilustração pessoa subindo uma escada.">
             </div>
         </section>
 
-        <!-- TERMINAR A SESSAO MISSAO E O RESTANTE -henrike -->
+        <!-- SECTION DOS PARCEIROS -->
+        <section id="parceiros" class="parceiros">
+            <div class="container-parceiros" data-aos="zoom-in">
+                <h3>SEJA NOSSO <span>PARCEIRO</span></h3>
+                <p>Apoiando o COMQ, você traz novas oportunidades para a comunidade do Mário Quintana, assim melhora a
+                    qualidade de vida e movimenta a economia da população.</p>
 
+
+                <div class="input-button-container">
+                    <input type="email" placeholder="Adicione seu e-mail aqui">
+                    <button>Enviar</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="parceiros-logos" data-aos="zoom-in">
+            <img src="assets/main/parceiros/oab.png" alt="Parceiro 1">
+            <img src="assets/main/parceiros/oab.png" alt="Parceiro 2">
+            <img src="assets/main/parceiros/oab.png" alt="Parceiro 3">
+
+        </div>
 
     </main>
     <!-- FIM DO CONTEÚDO PRINCIPAL DO SITE -->
 
+    <!-- RODAPÉ DA PÁGINA -->
+    <footer>
+        <div id="contato" class="venha-nos-conhecer" data-aos="zoom-in">
+            <h2>COMQ</h2>
+            <p>VENHA NOS CONHECER!</p>
 
+            <div>
+                <ion-icon name="logo-facebook"></ion-icon>
+                <ion-icon name="logo-instagram"></ion-icon>
+                <ion-icon name="logo-twitter"></ion-icon>
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </div>
+        </div>
 
+        <div class="formulario-comq" data-aos="zoom-in">
+            <form action="arquivoGambiarra.php">
+                <div class="input name">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" placeholder="Name">
+                </div>
+                <div class="input email">
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="input message">
+                    <label for="message">Mensagem</label><br>
+                    <textarea name="message" id="message" rows="4">Mensagem</textarea>
+                </div>
+                <button type="submit"></button>
+            </form>
+
+            <div class="comq-icon">
+                <img src="assets/footer/icone_comq.png" alt="Ícone COMQ">
+            </div>
+        </div>
+
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
+<script src="js/main.js"></script>
 <script src="./js/script.js"></script>
 <script src="./js/menuHamburguer.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
+
 </html>

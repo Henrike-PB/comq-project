@@ -11,6 +11,7 @@ header {
     background-color: #ffffff44;
     padding: 0 10px;
     border-radius: 0 0 10px 10px;
+    z-index: 999;
 
     @media screen and (width <= 500px) {
         width: 70%;
@@ -102,6 +103,7 @@ header .nav-links button {
 /* menu hamburguer */
 header .menu-hamburguer img {
     width: 50px;
+    cursor: pointer;
 
     @media screen and (width >= 620px) {
         display: none;
