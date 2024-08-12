@@ -1,40 +1,179 @@
-/* ESTILOS PARA O RODAPÉ DA PÁGINA */
+/* Estilos para o rodapé */
 footer {
-    display: flex;
-    justify-content: space-between;
     background-color: black;
     padding: 50px 0;
 }
 
+.contato {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permite que os itens do flexbox se movam para a próxima linha em telas menores */
+}
+
+footer .venha-nos-conhecer, 
+footer .formulario-comq {
+    width: 48%; /* Deixa os elementos com uma largura fixa quando em telas maiores */
+    box-sizing: border-box;
+}
+
 footer .venha-nos-conhecer {
-    border: 1px solid green;
+ 
+    color: var(--bg-color);
+    padding: 50px;
+}
+
+footer .venha-nos-conhecer h2 {
+    font-weight: 900;
+}
+
+footer .venha-nos-conhecer p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+
+footer .venha-nos-conhecer ion-icon {
+    color: black;
+    background-color: var(--amarelo-comq);
+    border-radius: 15px;
+    padding: 10px;
+    margin-right: 10px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+footer .venha-nos-conhecer ion-icon:hover {
+    background-color: var(--hoverAmarelo-comq);
 }
 
 footer .formulario-comq {
     display: flex;
     justify-content: space-between;
     background-color: var(--bg-color);
-    width: 50%;
     border-radius: 30px 0 0 30px;
     padding: 50px 25px 50px 80px;
     border: 1px solid red;
+    position: relative; /* Adicionado para controle de layout */
 }
 
-footer .formulario-comq form {
-    width: 350px;
-    border: 1px solid purple;
+.contact-form {
+    background-color: var(--bg-color);
+    padding: 5px;
+    width: 48%;
+    border-radius: 10px;
+    transition: .2s ease-out;
+    z-index: 1; /* Mantém o formulário em cima da imagem */
 }
 
-footer .formulario-comq form .input {
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%; /* Ajusta a largura para ocupar o espaço disponível */
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #191A23;
+    color: #ffffff;
+    border: none;
     width: 100%;
-    border: 1px solid gray;
+    padding: 15px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .2s ease-in-out;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #374052;
+    color: #F5D7DB;
 }
 
 footer .formulario-comq .comq-icon {
-    width: 40%;
-    border: 1px solid orange;
+    flex-shrink: 0; /* Previne que a imagem seja redimensionada com base no conteúdo ao lado */
+    width: 48%; /* Define a largura da imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer .formulario-comq .comq-icon img {
+    max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.copy-footer {
+    margin-top: 5%;
+    padding: 1px;
+    font-size: 0.7rem;
+    text-align: center;
+    color: var(--bg-color);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contato {
+        flex-direction: column; /* Altera a direção dos itens para coluna em telas menores */
+        align-items: center;
+    }
+
+    footer .venha-nos-conhecer, 
+    footer .formulario-comq {
+        width: 90%; /* Define a largura para 100% em telas menores */
+        margin-bottom: 20px; /* Adiciona espaço entre os blocos */
+        text-align: center;
+    }
+
+    footer .formulario-comq {
+        flex-direction: column; /* Alinha os itens do formulário em coluna */
+        padding: 30px 20px; /* Ajusta o padding para telas menores */
+    border-radius: 30px ;
+
+    }
+
+   
+
+    .contact-form input[type="text"],
+.contact-form textarea {
+    width: 95%; /* Ajusta a largura para ocupar o espaço disponível */
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+
+.contact-form input[type="submit"] {
+    margin: auto 0;
     width: 100%;
+}
+
+.formulario{
+
+  margin: 0 auto ;
+  width: 85%;
+}
+
+
+    .contact-form {
+        width: 100%; /* Ajusta o formulário para ocupar a largura total */
+    }
+
+    footer .formulario-comq .comq-icon {
+        width: 100%; /* Ajusta a largura da imagem para ocupar o espaço disponível */
+        margin-bottom: 5px; /* Espaçamento entre a imagem e o formulário */
+    }
+
+    footer .formulario-comq .comq-icon img {
+        max-width: 70%; /* Garante que a imagem não exceda a largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
 }

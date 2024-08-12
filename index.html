@@ -20,6 +20,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <!-- Fonte Roboto do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -197,41 +201,92 @@
 
     <!-- RODAPÉ DA PÁGINA -->
     <footer>
-        <div id="contato" class="venha-nos-conhecer" data-aos="zoom-in">
-            <h2>COMQ</h2>
-            <p>VENHA NOS CONHECER!</p>
+        <div class="contato">
 
-            <div>
-                <ion-icon name="logo-facebook"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-twitter"></ion-icon>
-                <ion-icon name="logo-linkedin"></ion-icon>
+            <div id="contato" class="venha-nos-conhecer" data-aos="zoom-in">
+                <h2>COMQ</h2>
+                <p>VENHA NOS CONHECER!</p>
+    
+                <div>
+                    <ion-icon name="logo-facebook"></ion-icon>
+                    <ion-icon name="logo-instagram"></ion-icon>
+                    <ion-icon name="logo-twitter"></ion-icon>
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </div>
             </div>
-        </div>
+    
+            <div class="formulario-comq" data-aos="zoom-in">
+            
+                
+                    <div class="contact-form">
+                        
+                        <form class="formulario" id="contactForm" action="https://formsubmit.co/pajaresbragahenrike@gmail.com" method="POST">
+                            <label for="name">Nome:</label>
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        
+                            <label for="email">Email:</label>
+                            <input type="text" id="email" name="email" placeholder="exemplo@email.com" required>
+                        
+                            <label for="message">Mensagem:</label>
+                            <textarea id="message" name="message" placeholder="Escreva sua mensagem aqui" required></textarea>
+                        
+                            <input type="hidden" name="_next" value="">
+                            <input type="submit" class="btn" value="Enviar uma mensagem" >               
+                        </form>
+                        
+                        <!-- <div class="popup" id="popup">
+                            <img src="assets/shortcut/comq-icon.png" alt="">
+                            <h2>Obrigado!</h2>
+                            <p>Sua mensagem foi enviada. Responderei assim que possível!</p>
+                            <button type="button" onclick="closePopup()">OK</button>
+                        </div> -->
+                        
+                        <!-- script para evitar que apos o envio da mensagem seja redirecionado -->
 
-        <div class="formulario-comq" data-aos="zoom-in">
-            <form action="arquivoGambiarra.php">
-                <div class="input name">
-                    <label for="name">Name</label><br>
-                    <input type="text" id="name" placeholder="Name">
-                </div>
-                <div class="input email">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" placeholder="Email">
-                </div>
-                <div class="input message">
-                    <label for="message">Mensagem</label><br>
-                    <textarea name="message" id="message" rows="4">Mensagem</textarea>
-                </div>
-                <button type="submit"></button>
-            </form>
+                        <!-- script desenvolvido com ajuda do chatgpt e ideia de resolução vista com jgbpedro -->
+                        <script>                            
+                            window.onload = () => {
+                                const form = document.getElementById("contactForm");
+                                form.onsubmit = (event) => {
+                                    event.preventDefault();
+                                    const data = new FormData(event.target);
+                                    fetch(event.target.action, {
+                                        method: form.method,
+                                        body: data,
+                                        headers: {
+                                            Accept: "application/json",
+                                        },
+                                    })
+                                    .then((response) => {
+                                        openPopup(); // Chamando a função openPopup quando a submissão for bem-sucedida
+                                        form.reset();
+                                    })
+                                    .catch((error) => {
+                                        console.error("Erro ao enviar o formulário:", error);
+                                        // Aqui você pode adicionar tratamento de erro, se desejar
+                                    });
+                                };
+                            };
+                        </script>
+                        
+                
 
-            <div class="comq-icon">
-                <img src="assets/footer/icone_comq.png" alt="Ícone COMQ">
+                    </div>
+                
+    
+                <div class="comq-icon">
+                    <img src="assets/footer/icone_comq.png" alt="Ícone COMQ">
+                </div>
             </div>
-        </div>
 
+        </div>
+     
+        <p class="copy-footer">COMQ - Centro de Oportunidades do Mário Quintana | Todos os direitos reservados. 2024 &copy;</p>
+
+        
     </footer>
+
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
