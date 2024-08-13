@@ -125,6 +125,110 @@ footer .formulario-comq .comq-icon img {
     color: var(--bg-color);
 }
 
+
+/* Pop Up da mensagem enviada */
+.popup {
+    width: 400px;
+    background-color: var(--verde-comq);
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #ffffff;
+    visibility: hidden;
+    transition: transform 0.2s, top 0.2s; /* Transição mais rápida */
+    z-index: 9999; /* Assegura que o popup esteja acima de outros elementos */
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+  .popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 65%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  .popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: var(--laranja-comq);
+    color: black;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+ 
+  @media (max-width: 600px) {
+    .popup {
+      width: 90%; /* Redimensiona o popup para 90% da largura da tela */
+      max-width: 300px; /* Define a largura máxima para 300px */
+      padding: 20px; /* Ajusta o preenchimento interno */
+      font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+  
+    .popup img {
+      width: 80px; /* Reduz o tamanho da imagem */
+      margin-top: -40px; /* Ajusta a margem superior da imagem */
+    }
+  
+    .popup h2 {
+      font-size: 24px; /* Reduz o tamanho do título */
+      margin: 20px 0 10px; /* Ajusta as margens do título */
+    }
+  
+    .popup button {
+      margin-top: 30px; /* Ajusta a margem superior do botão */
+    }
+  }
+  
+  .open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+ 
+  .popup img {
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 65%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+  
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #BD83B8;
+    color: black;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
 @media (max-width: 1000px) {
     .contato {
         flex-direction: column;

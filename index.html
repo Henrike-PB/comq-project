@@ -3,7 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Ajudar no SEO -->
+  
+    <meta name="title" content="COMQ - Centro de Oportunidades do Mário Quintana">
+    <meta name="description" content="O COMQ - Centro de Oportunidades do Mário Quintana oferece suporte a empreendedores, jovens talentos e iniciativas locais do bairro Mário Quintana, impulsionando o desenvolvimento comunitário.">
+    <meta name="keywords" content="COMQ, Oportunidades, Empreendedores, Jovens Talentos, Comunidade, Mário Quintana, Desenvolvimento Local, Empreendimentos, Projetos Sociais">
+    <meta name="copyright" content="© 2024 COMQ - Centro de Oportunidades do Mário Quintana">
+    <meta name="author" content="COMQ - Centro de Oportunidades do Mário Quintana">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta name="rating" content="general">
+    <meta property="og:title" content="COMQ - Centro de Oportunidades do Mário Quintana">
+    <meta property="og:description" content="Impulsionando empreendedores e jovens talentos no bairro Mário Quintana. Participe da nossa comunidade e ajude a transformar vidas!">
+    <meta property="og:image" content="assets/shortcut/comq-icon2.png">
+    <meta property="og:url" content="URL_DO_SEU_SITE">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="COMQ - Centro de Oportunidades do Mário Quintana">
+    <meta name="twitter:description" content="Participe da nossa comunidade e ajude a transformar vidas no bairro Mário Quintana. Saiba mais sobre o COMQ.">
+    <meta name="twitter:image" content="assets/shortcut/comq-icon2.png">
+
+    <!-- melhorar no desempenho da pagina com preferencia de carregamento -->
+    <link rel="preload" href="media/henrike.png" as="image">
+
     <title>COMQ - Centro de Oportunidades do Mário Quintana</title>
     <link rel="shortcut icon" href="assets/shortcut/comq-icon2.png" type="image/x-icon">
     <!-- arquivos css -->
@@ -26,7 +52,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
 
     <!-- CABEÇALHO DO SITE -->
     <header>
@@ -109,7 +135,7 @@
                 <h2 class="titulo-container">Faça parte dessa <br> <span>comunidade!</span></h1>
                     <div class="buttons">
                         <div class="jovens qrbutton">
-                            <button title="Comunidade Jovens" class="cta-btn" onclick="zoomOne()">Jovens</button>
+                            <button title="Comunidade Jovens" class="cta-btn" onclick="openContain('qrjovens')">Jovens</button>
                             <div class="qrjovens qr" id="qrjovens">
 
                                 <h2>Jovens</h2>
@@ -117,13 +143,13 @@
                                 <img src="assets/main/facaParteDaComunidade/qr-jovens.jpeg" alt="qrcode" width="200px"
                                     height="200px">
                                 <a href="https://chat.whatsapp.com/IEoF66GNAYq1VtF02pPiy5">
-                                    <button title="Entrar na comunidade" > Entre na comunidade </button>
+                                    <button title="Entrar na comunidade" class="entre-na-comunidade-btn"> Entre na comunidade </button>
                                 </a>
-                                <button title="Fechar QR Code" onclick="exit()"> Fechar </button>
+                                <button title="Fechar QR Code" class="close-qrcode" onclick="closeContain('qrjovens')"> Fechar </button>
                             </div>
                         </div>
                         <div class="empreendimentos qrbutton">
-                            <button title="Comunidade Empreendimentos" class="cta-btn pink" onclick="zoomTwo()">Empreendimentos</button>
+                            <button title="Comunidade Empreendimentos" class="cta-btn pink" onclick="openContain('qrempreendimentos')">Empreendimentos</button>
                             <div class="qrempreendimentos qr" id="qrempreendimentos">
 
                                 <h2>Empreendimentos</h2>
@@ -132,13 +158,13 @@
                                     width="200px" height="200px">
 
                                 <a href="https://chat.whatsapp.com/GE8BFLWP2Kk98gA3JHaEsG">
-                                    <button title="Entrar na comunidade"> Entre na comunidade </button>
+                                    <button title="Entrar na comunidade" class="entre-na-comunidade-btn"> Entre na comunidade </button>
                                 </a>
-                                <button title="Fechar QR Code" onclick="exit()"> Fechar </button>
+                                <button title="Fechar QR Code" class="close-qrcode" onclick="closeContain('qrempreendimentos')"> Fechar </button>
                             </div>
                         </div>
                         <div class="empreendedoras qrbutton">
-                            <button title="Comunidade Empreendedoras" class="cta-btn" onclick="zoomThree()">Empreendedoras</button>
+                            <button title="Comunidade Empreendedoras" class="cta-btn" onclick="openContain('qrempreendedoras')">Empreendedoras</button>
                             <div class="qrempreendedoras qr" id="qrempreendedoras">
 
                                 <h2>Empreendedoras</h2>
@@ -146,9 +172,9 @@
                                 <img src="assets/main/facaParteDaComunidade/qr-empreendedoras.jpeg" alt="qrcode"
                                     width="200px" height="200px">
                                 <a href="https://chat.whatsapp.com/B6ZCV0jxCsY07b8X8Rkf3N">
-                                    <button title="Entrar na comunidade"> Entre na comunidade </button>
+                                    <button title="Entrar na comunidade" class="entre-na-comunidade-btn"> Entre na comunidade </button>
                                 </a>
-                                <button title="Fechar QR Code" onclick="exit()"> Fechar </button>
+                                <button title="Fechar QR Code" class="close-qrcode" onclick="closeContain('qrempreendedoras')"> Fechar </button>
                             </div>
                         </div>
                     </div>
@@ -206,16 +232,17 @@
                 <p>VENHA NOS CONHECER!</p>
     
                 <div>
-                    <ion-icon name="logo-facebook"></ion-icon>
-                    <ion-icon name="logo-instagram"></ion-icon>
-                    <ion-icon name="logo-twitter"></ion-icon>
-                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <a href="https://www.linkedin.com/company/comq-projeto/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="https://www.instagram.com/comq.projeto/"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.facebook.com/profile.php?id=61557519707898&mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a>
+                    
+                    
                 </div>
             </div>
     
             <div class="formulario-comq" data-aos="zoom-in">
                     <div id="contato" class="contact-form">
-                        <form class="formulario" id="contactForm" action="https://formsubmit.co/pajaresbragahenrike@gmail.com" method="POST">
+                        <form class="formulario" id="contactForm" action="https://formsubmit.co/comq.projeto@gmail.com" method="POST">
                             <label for="name">Nome:</label>
                             <input type="hidden" name="_captcha" value="false">
                             <input type="text" id="name" name="name" placeholder="Seu nome" required>
@@ -229,6 +256,47 @@
                             <input type="hidden" name="_next" value="">
                             <input type="submit" class="btn" value="Enviar uma mensagem" >               
                         </form>
+
+                        <div class="popup" id="popup">
+                            <h2>Obrigado!</h2>
+                            <p>Sua mensagem foi enviada.</p>
+                            <button type="button" onclick="closePopup()">OK</button>
+                        </div>
+
+                        <!-- script para evitar que apos o envio da mensagem seja redirecionado -->
+                        <script>                            
+                            window.onload = () => {
+                                const form = document.getElementById("contactForm");
+                                form.onsubmit = (event) => {
+                                    event.preventDefault();
+                                    const data = new FormData(event.target);
+                                    fetch(event.target.action, {
+                                        method: form.method,
+                                        body: data,
+                                        headers: {
+                                            Accept: "application/json",
+                                        },
+                                    })
+                                    .then((response) => {
+                                        openPopup(); // Chamando a função openPopup quando a submissão for bem-sucedida
+                                        form.reset();
+                                    })
+                                    .catch((error) => {
+                                        console.error("Erro ao enviar o formulário:", error);
+                                    });
+                                };
+                            };
+                        
+                            function openPopup() {
+                                const popup = document.getElementById("popup");
+                                popup.classList.add("open-popup");
+                            }
+                        
+                            function closePopup() {
+                                const popup = document.getElementById("popup");
+                                popup.classList.remove("open-popup");
+                            }
+                        </script>
                     </div>
                 <div class="comq-icon">
                     <img src="assets/footer/icone_comq.png" alt="Ícone COMQ">
@@ -242,12 +310,12 @@
         
     </footer>
 
+    <a href="#top" class="back-to-top"><strong>^</strong></a>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
-<script src="js/main.js"></script>
-<script src="./js/script.js"></script>
+<script src="./js/toggleable.js"></script>
 <script src="./js/menuHamburguer.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 

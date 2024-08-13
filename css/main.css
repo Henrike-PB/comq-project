@@ -185,7 +185,6 @@ hr {
     font-family: Arial, Helvetica, sans-serif;
     -webkit-text-stroke: 1px #255157; /* Contorno verde */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra */
-    
 }
 
 .card h3 {
@@ -199,14 +198,12 @@ hr {
     height: auto;
 }
 
-
 @media (max-width: 768px) {
     .card {
         max-width: 100%;
         text-align: center;
     }
 }
-
 /* FIM CONFIG. SOBRE NÓS (QUEM SOMOS) */
 
 /* CONFIG. "FAÇA PARTE DA COMUNIDADE" */
@@ -218,7 +215,7 @@ hr {
     border-radius: 10px;
     padding: 3em;
     margin-top: 4em;
-    height: 90vh;
+    height: 110vh;
     color: var(--bg-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -232,7 +229,6 @@ hr {
 
     & a {
         text-decoration: none;
-        width: 200px;
     }
 }
 
@@ -250,6 +246,13 @@ hr {
     font-weight: 900;
 }
 
+
+
+.entre-na-comunidade-btn, 
+.close-qrcode{
+    cursor: pointer;
+}
+
 .buttons {
     display: flex;
     flex-direction: column;
@@ -264,6 +267,7 @@ hr {
 .qr{
     display: none;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 1em;
     margin: 0.5em;
@@ -272,7 +276,6 @@ hr {
 }
 
 .cta-btn{
-    
     width: 300px;
     cursor: pointer;
     height: 60px;
@@ -550,4 +553,17 @@ hr {
     padding: 3px 13px;
 
     }
+  }
+
+  .back-to-top{
+    width: fit-content;
+    text-decoration: none;
+    background: var(--rosa-comq);
+    color: #fff;
+    padding: 0.5em;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 2em;
   }
