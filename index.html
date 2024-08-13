@@ -36,20 +36,20 @@
         </div>
 
         <nav class="nav-links">
-            <a href="#sobre">QUEM SOMOS</a>
-            <a href="#missao">MISSÃO</a>
-            <a href="#parceiros">PARCEIROS</a>
-            <button href="#contato">ENTRE EM CONTATO</button>
+            <a title="Sobre nós" href="#sobre">QUEM SOMOS</a>
+            <a title="Conheça nossa missão" href="#missao">MISSÃO</a>
+            <a title="Nossos parceiros" href="#parceiros">PARCEIROS</a>
+            <button onClick="window.location.href='#contato';">ENTRE EM CONTATO</button>
         </nav>
 
         <div class="menu-hamburguer">
-            <img src="./assets/header/menu-hamburguer-Icon.png" onclick="openMenu()" alt="Menu hamburguer">
+            <img title="Abrir menu" src="./assets/header/menu-hamburguer-Icon.png" onclick="openMenu()" alt="Menu hamburguer">
             <nav id="menuNavLinks">
-                <a href="#sobre">QUEM SOMOS</a>
-                <a href="#missao">MISSÃO</a>
-                <a href="#parceiros">PARCEIROS</a>
-                <button class="entre-em-contato-btn">ENTRE EM CONTATO</button>
-                <button class="close-menu" onclick="closeMenu()">close</button>
+                <a title="Sobre nós" href="#sobre">QUEM SOMOS</a>
+                <a title="Conheça nossa missão" href="#missao">MISSÃO</a>
+                <a title="Nossos parceiros" href="#parceiros">PARCEIROS</a>
+                <button title="Mande uma mensagem" class="entre-em-contato-btn" onClick="window.location.href='#contato';">ENTRE EM CONTATO</button>
+                <button title="Fechar menu" class="close-menu" onclick="closeMenu()">Fechar</button>
             </nav>
         </div>
     </header>
@@ -61,9 +61,8 @@
         <section class="container-intro" data-aos="zoom-in">
             <div class="text-content">
                 <h1 style="font-weight: 900;">OPORTUNIDADES <br> para tod@s</h1>
-                <p>Impulsionando empreendedores, jovens talentos e empreendimentos locais do <br> bairro Mário Quintana
-                </p>
-                <button><a href="#">PARTICIPE</a></button>
+                <p>Impulsionando empreendedores, jovens talentos e empreendimentos locais do bairro Mário Quintana</p>
+                <button><a href="#comunidade">PARTICIPE</a></button>
             </div>
 
             <div class="image-container">
@@ -83,7 +82,7 @@
             <h2 style="font-weight: 900; text-align: center;">QUEM SOMOS?</h2>
             <p>Somos um projeto que combina vontade, inovação e criatividade para ajudar as pessoas</p>
             <div class="sobre-btn">
-                <button><a href="#">SAIBA MAIS</a></button>
+                <button title="Saiba mais sobre nossa missão"><a href="#missao">SAIBA MAIS</a></button>
             </div>
 
             <div class="container-cards" data-aos="zoom-in">
@@ -105,12 +104,12 @@
 
         <!-- SECTION DE "FAÇA PARTE DA COMUNIDADE"  -->
 
-        <section class="container" >
+        <section id="comunidade" class="container" >
             <div class="content" data-aos="zoom-in">
                 <h2 class="titulo-container">Faça parte dessa <br> <span>comunidade!</span></h1>
                     <div class="buttons">
                         <div class="jovens qrbutton">
-                            <button class="cta-btn" onclick="zoomOne()">Jovens</button>
+                            <button title="Comunidade Jovens" class="cta-btn" onclick="zoomOne()">Jovens</button>
                             <div class="qrjovens qr" id="qrjovens">
 
                                 <h2>Jovens</h2>
@@ -118,13 +117,13 @@
                                 <img src="assets/main/facaParteDaComunidade/qr-jovens.jpeg" alt="qrcode" width="200px"
                                     height="200px">
                                 <a href="https://chat.whatsapp.com/IEoF66GNAYq1VtF02pPiy5">
-                                    <button> Entre na comunidade </button>
+                                    <button title="Entrar na comunidade" > Entre na comunidade </button>
                                 </a>
-                                <button onclick="exit()"> Fechar </button>
+                                <button title="Fechar QR Code" onclick="exit()"> Fechar </button>
                             </div>
                         </div>
                         <div class="empreendimentos qrbutton">
-                            <button class="cta-btn pink" onclick="zoomTwo()">Empreendimentos</button>
+                            <button title="Comunidade Empreendimentos" class="cta-btn pink" onclick="zoomTwo()">Empreendimentos</button>
                             <div class="qrempreendimentos qr" id="qrempreendimentos">
 
                                 <h2>Empreendimentos</h2>
@@ -133,13 +132,13 @@
                                     width="200px" height="200px">
 
                                 <a href="https://chat.whatsapp.com/GE8BFLWP2Kk98gA3JHaEsG">
-                                    <button> Entre na comunidade </button>
+                                    <button title="Entrar na comunidade"> Entre na comunidade </button>
                                 </a>
-                                <button onclick="exit()"> Fechar </button>
+                                <button title="Fechar QR Code" onclick="exit()"> Fechar </button>
                             </div>
                         </div>
                         <div class="empreendedoras qrbutton">
-                            <button class="cta-btn" onclick="zoomThree()">Empreendedoras</button>
+                            <button title="Comunidade Empreendedoras" class="cta-btn" onclick="zoomThree()">Empreendedoras</button>
                             <div class="qrempreendedoras qr" id="qrempreendedoras">
 
                                 <h2>Empreendedoras</h2>
@@ -147,9 +146,9 @@
                                 <img src="assets/main/facaParteDaComunidade/qr-empreendedoras.jpeg" alt="qrcode"
                                     width="200px" height="200px">
                                 <a href="https://chat.whatsapp.com/B6ZCV0jxCsY07b8X8Rkf3N">
-                                    <button> Entre na comunidade </button>
+                                    <button title="Entrar na comunidade"> Entre na comunidade </button>
                                 </a>
-                                <button onclick="exit()"> Fechar </button>
+                                <button title="Fechar QR Code" onclick="exit()"> Fechar </button>
                             </div>
                         </div>
                     </div>
@@ -183,8 +182,7 @@
 
 
                 <div class="input-button-container">
-                    <input type="email" placeholder="Adicione seu e-mail aqui">
-                    <button>Enviar</button>
+                    <button><a href="#contato">Envie-nos uma mensagem!</a></button>
                 </div>
             </div>
         </section>
@@ -216,10 +214,7 @@
             </div>
     
             <div class="formulario-comq" data-aos="zoom-in">
-            
-                
-                    <div class="contact-form">
-                        
+                    <div id="contato" class="contact-form">
                         <form class="formulario" id="contactForm" action="https://formsubmit.co/pajaresbragahenrike@gmail.com" method="POST">
                             <label for="name">Nome:</label>
                             <input type="hidden" name="_captcha" value="false">
@@ -234,47 +229,7 @@
                             <input type="hidden" name="_next" value="">
                             <input type="submit" class="btn" value="Enviar uma mensagem" >               
                         </form>
-                        
-                        <!-- <div class="popup" id="popup">
-                            <img src="assets/shortcut/comq-icon.png" alt="">
-                            <h2>Obrigado!</h2>
-                            <p>Sua mensagem foi enviada. Responderei assim que possível!</p>
-                            <button type="button" onclick="closePopup()">OK</button>
-                        </div> -->
-                        
-                        <!-- script para evitar que apos o envio da mensagem seja redirecionado -->
-
-                        <!-- script desenvolvido com ajuda do chatgpt e ideia de resolução vista com jgbpedro -->
-                        <script>                            
-                            window.onload = () => {
-                                const form = document.getElementById("contactForm");
-                                form.onsubmit = (event) => {
-                                    event.preventDefault();
-                                    const data = new FormData(event.target);
-                                    fetch(event.target.action, {
-                                        method: form.method,
-                                        body: data,
-                                        headers: {
-                                            Accept: "application/json",
-                                        },
-                                    })
-                                    .then((response) => {
-                                        openPopup(); // Chamando a função openPopup quando a submissão for bem-sucedida
-                                        form.reset();
-                                    })
-                                    .catch((error) => {
-                                        console.error("Erro ao enviar o formulário:", error);
-                                        // Aqui você pode adicionar tratamento de erro, se desejar
-                                    });
-                                };
-                            };
-                        </script>
-                        
-                
-
                     </div>
-                
-    
                 <div class="comq-icon">
                     <img src="assets/footer/icone_comq.png" alt="Ícone COMQ">
                 </div>

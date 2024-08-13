@@ -27,12 +27,20 @@
     font-size: 3.3em;
     margin-bottom: 10px;
     color: var(--verde-comq);
+
+    @media screen and (width <= 500px) {
+        font-size: 1.65em;
+    }
 }
 
 .text-content p {
     font-size: 1.2em;
     max-width: 449px;
     margin-bottom: 20px;
+
+    @media screen and (width <= 500px) {
+        font-size: 0.6em;
+    }
 }
 
 .text-content button {
@@ -65,12 +73,20 @@
     @media screen and (width <= 1000px) {
         margin: 50px 0 0 0;
     }
+
+    @media screen and (width <= 500px) {
+        max-width: 300px;
+    }
 }
 
 .image-container .img-1 {
     width: 5em;
     margin: 0 auto;
     margin-bottom: -5vw;
+
+    @media screen and (width <= 500px) {
+        width: 2.5em;
+    }
 }
 
 .image-container .img-1 img {
@@ -478,34 +494,34 @@ hr {
 
 .input-button-container {
     display: flex;
+
     gap: 10px;
     margin: 0 auto;
     padding: 8px;
-    width: 70%;
+    width: 40%;
     border-radius: 10px;
     background-color: var(--bg-color);
 }
 
-input[type="email"] {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    flex: 1;
+.input-button-container a{
+    text-decoration: none;
+    color: var(--bg-color);
 }
 
-button {
+.input-button-container button {
     padding: 10px 20px;
     font-size: 1em;
     cursor: pointer;
     background-color: #000000;
     color: white;
     border: none;
+    margin: 0 auto;
+
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-button:hover {
+.input-button-container button:hover {
     background-color: #555555;
 }
 
